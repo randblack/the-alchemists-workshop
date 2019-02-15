@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>
+      Crystal Collector
+    </title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./assets/javascript/game.js"></script>
+  </head>
+  <body onLoad="setup();">
+    <div class="mainContent">
+      <div class="title">
+        Crystal Collector
+      </div>
+      <div class="instructions">
+        You will be given a random number at the start of the game.<br />
+        By selecting one of the four crystals below you will add points to your score.<br />
+        To win your score must equal the target number, if your score goes above the target you will lose.<br />
+        The value of each crystal is hidden and every game gives the crystals a new value.<br />
+        Good Luck, Traveler.
+      </div>
+      <div class="stats">
+        <div class="goal"></div>
+        <div class="score">Score :<br />0</div>
+      </div>
+      <div class="gem gem1">
+        <img class="gemImage" src="./assets/images/gem1-1.png">
+      </div>
+      <div class="gem gem2">
+        <img class="gemImage" src="./assets/images/gem2-2.png">
+      </div>
+      <div class="gem gem3">
+        <img class="gemImage" src="./assets/images/gem3-3.png">
+      </div>
+      <div class="gem gem4">
+        <img class="gemImage" src="./assets/images/gem4-4.png">
+      </div>
+      <div class="scoreBoard">
+        <div class="wins"> 0</div>
+        <div class="loses"></div>
+      </div>
+    </div>
+  </body>
+</html>
