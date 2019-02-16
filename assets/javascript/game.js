@@ -2,20 +2,53 @@ let wins = 0;
 let loses = 0;
 let score = 0;
 let valueGoal;
+let gemValue1 = 0;
+let gemValue2 = 0;
+let gemValue3 = 0;
+let gemValue4 = 0;
 
 function setup() {
+  
   var x = $(".goal");
   var valueGoal = Math.floor(Math.random() * (120 - 19) + 19);
   x.html("Target :<br />" + valueGoal)
+    var gemValue1 = Math.floor(Math.random() * (12 - 1) + 1);
+    var gemValue2 = Math.floor(Math.random() * (12 - 1) + 1);
+    var gemValue3 = Math.floor(Math.random() * (12 - 1) + 1);
+    var gemValue4 = Math.floor(Math.random() * (12 - 1) + 1);
+    while(gemValue1 === gemValue4) {
+      var gemValue1 = Math.floor(Math.random() * (12 - 1) + 1);
+    }
+    while(gemValue2 === gemValue4 || gemValue2 === gemValue1) {
+      var gemValue2 = Math.floor(Math.random() * (12 - 1) + 1);
+    }
+    while(gemValue3 === gemValue4 || gemValue3 === gemValue2 || gemValue3 === gemValue1) {
+      var gemValue3 = Math.floor(Math.random() * (12 - 1) + 1);
+    }
+    console.log(gemValue1);
+    console.log(gemValue2);
+    console.log(gemValue3);
+    console.log(gemValue4);
 
-  var gemValue1 = Math.floor(Math.random() * (12 - 1) + 1);
-  console.log(gemValue1);
-  var gemValue2 = Math.floor(Math.random() * (12 - 1) + 1);
-  console.log(gemValue2);
-  var gemValue3 = Math.floor(Math.random() * (12 - 1) + 1);
-  console.log(gemValue3);
-  var gemValue4 = Math.floor(Math.random() * (12 - 1) + 1);
-  console.log(gemValue4);
+    // var gem1 = $(".gem1");
+    // var gem2 = $(".gem2");
+    // var gem3 = $(".gem3");
+    // var gem4 = $(".gem4");
+
+    // $(gem1 & gem2 & gem3 & gem4).click(function () {
+    //   var x = $(".score");
+    //   score = score + gemValue1;
+    //   x.html("Score :<br />" + score)
+    //   var y = $(".score");
+    //   score = score + gemValue2;
+    //   y.html("Score :<br />" + score)
+    //   var z = $(".score");
+    //   score = score + gemValue3;
+    //   z.html("Score :<br />" + score)
+    //   var q = $(".score");
+    //   score = score + gemValue4;
+    //   q.html("Score :<br />" + score)
+    // });
 
   $(".gem1").click(addGem1);
   function addGem1() {
@@ -55,6 +88,11 @@ function setup() {
       x.html("Score :<br />" + score);
       console.log("score" + score);
       setup();
+      score = 0;
+      gemValue1 = 0;
+      gemValue2 = 0;
+      gemValue3 = 0;
+      gemValue4 = 0;
     }
     if (score === valueGoal) {
       wins++;
@@ -64,10 +102,14 @@ function setup() {
       x.html("Score :<br />" + score);
       console.log("score" + score);
       setup();
+      gemValue1 = 0;
+      gemValue2 = 0;
+      gemValue3 = 0;
+      gemValue4 = 0;
     }
   }
   var winsDiv = $(".wins");
-  winsDiv.html("Wins : " + wins)
+  winsDiv.html("Wins : &nbsp;" + wins)
   var losesDiv = $(".loses");
   losesDiv.html("Loses : " + loses)
 }
