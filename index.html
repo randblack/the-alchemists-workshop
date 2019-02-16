@@ -5,9 +5,13 @@
     </title>
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="assets/javascript/jquery.playSound.js"></script>
     <script src="./assets/javascript/game.js"></script>
   </head>
   <body onLoad="setup();">
+      <audio id="soundtrack" autoplay loop>
+          <source src="./assets/audio/Star-Commander.mp3" type="audio/mpeg">
+        </audio>
     <div class="mainContent">
       <div class="title">
         Crystal Collector
@@ -17,7 +21,7 @@
         By selecting one of the four crystals below you will add points to your score.<br />
         To win your score must equal the target number, if your score goes above the target you will lose.<br />
         The value of each crystal is hidden and every game gives the crystals a new value.<br />
-        Good Luck, Traveler.
+        Good Luck, Traveler<span class="one">.</span><span class="two">.</span><span class="three">.</span>
       </div>
       <div class="stats">
         <div class="goal"></div>

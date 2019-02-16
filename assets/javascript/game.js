@@ -8,7 +8,7 @@ let gemValue3 = 0;
 let gemValue4 = 0;
 
 function setup() {
-  
+
   var x = $(".goal");
   var valueGoal = Math.floor(Math.random() * (120 - 19) + 19);
   x.html("Target :<br />" + valueGoal)
@@ -96,6 +96,7 @@ function setup() {
     }
     if (score === valueGoal) {
       wins++;
+      $.playSound('assets/audio/gem-bag.mp3')
       alert("You Win!");
       var x = $(".score");
       score = 0;

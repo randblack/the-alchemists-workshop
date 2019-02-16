@@ -6,7 +6,6 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   font-family: 'MOZART';
-
 }
 
 .mainContent {
@@ -58,10 +57,14 @@ body {
 
 .gem {
   float: left;
-  border-radius: 55px;
   width: 110px;
   height: 110px;
-  /* background-color: rgb(175, 175, 175); */
+  transition: opacity .5s ease-out;
+}
+
+.gem:hover {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
 }
 
 .gem1 {
@@ -114,4 +117,28 @@ body {
   src: url('../fonts/OldSchoolAdventures.ttf');
   font-family: 'MOZART';
   src: url('../fonts/MOZART.ttf')
+}
+
+.one {
+  opacity: 0;
+  animation: dot 1.5s infinite;
+  animation-delay: 0.2s;
+}
+
+.two {
+  opacity: 0;
+    animation: dot 1.5s infinite;
+    animation-delay: 0.4s;
+}
+
+.three {
+  opacity: 0;
+  animation: dot 1.5s infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes dot {
+    0% { opacity: 0; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
 }
