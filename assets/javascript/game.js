@@ -54,28 +54,32 @@ function setup() {
   function addGem1() {
     var x = $(".score");
     score = score + gemValue1;
-    x.html("Score :<br />" + score)
+    x.html("Score :<br />" + score);
+    $(this).off(event);
   }
 
   $(".gem2").click(addGem2);
   function addGem2() {
     var x = $(".score");
     score = score + gemValue2;
-    x.html("Score :<br />" + score)
+    x.html("Score :<br />" + score);
+    $(this).off(event);
   }
 
   $(".gem3").click(addGem3);
   function addGem3() {
     var x = $(".score");
     score = score + gemValue3;
-    x.html("Score :<br />" + score)
+    x.html("Score :<br />" + score);
+    $(this).off(event);
   }
 
   $(".gem4").click(addGem4);
   function addGem4() {
     var x = $(".score");
     score = score + gemValue4;
-    x.html("Score :<br />" + score)
+    x.html("Score :<br />" + score);
+    $(this).off(event);
   }
 
   $(".gem1,.gem2,.gem3,.gem4").click(checkValue);
@@ -88,11 +92,7 @@ function setup() {
       x.html("Score :<br />" + score);
       console.log("score" + score);
       setup();
-      score = 0;
-      gemValue1 = 0;
-      gemValue2 = 0;
-      gemValue3 = 0;
-      gemValue4 = 0;
+      // $("gem1,.gem2,.gem3,.gem4").off(event);
     }
     if (score === valueGoal) {
       wins++;
@@ -103,10 +103,7 @@ function setup() {
       x.html("Score :<br />" + score);
       console.log("score" + score);
       setup();
-      gemValue1 = 0;
-      gemValue2 = 0;
-      gemValue3 = 0;
-      gemValue4 = 0;
+      // $("gem1,.gem2,.gem3,.gem4").off(event);
     }
   }
   var winsDiv = $(".wins");
