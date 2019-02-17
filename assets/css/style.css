@@ -140,7 +140,7 @@ body {
   100% { opacity: 1; }
 }
 
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 740px) {
   .mainContent {
     margin: auto;
     width: 90%;
