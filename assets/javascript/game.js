@@ -7,6 +7,10 @@ let gemValue2 = 0;
 let gemValue3 = 0;
 let gemValue4 = 0;
 
+function mute() {
+  document.getElementById('soundtrack').muted=!document.getElementById('soundtrack').muted;
+}
+
 function setup() {
 
   var x = $(".goal");

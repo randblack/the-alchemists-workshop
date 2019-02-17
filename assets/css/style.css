@@ -84,7 +84,7 @@ body {
 }
 
 .scoreBoard {
-  clear: both;
+  float: left;
   margin-top: 10px;
   margin-bottom: 15px;
   width: 130px;
@@ -134,13 +134,31 @@ body {
   animation-delay: 0.5s;
 }
 
+.audioControl {
+  float: right;
+}
+
+button {
+  float: left;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  width: 130px;
+  height: 94px;
+  background-color: rgba(0, 0, 0, 0.65);
+  border: ridge 5px rgb(255, 255, 255);
+  color: rgb(230, 231, 180);
+  padding: 10px;
+  line-height: 1em;
+  font-size: 2em;
+}
+
 @keyframes dot {
   0% { opacity: 0; }
   50% { opacity: 0; }
   100% { opacity: 1; }
 }
 
-@media only screen and (max-width: 740px) {
+@media only screen and (max-width: 760px) {
   .mainContent {
     margin: auto;
     width: 90%;
