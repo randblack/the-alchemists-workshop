@@ -55,7 +55,6 @@ function setup() {
     var x = $(".score");
     score = score + gemValue1;
     x.html("Score :<br />" + score);
-    $(this).off(event);
   }
 
   $(".gem2").click(addGem2);
@@ -63,7 +62,6 @@ function setup() {
     var x = $(".score");
     score = score + gemValue2;
     x.html("Score :<br />" + score);
-    $(this).off(event);
   }
 
   $(".gem3").click(addGem3);
@@ -71,7 +69,6 @@ function setup() {
     var x = $(".score");
     score = score + gemValue3;
     x.html("Score :<br />" + score);
-    $(this).off(event);
   }
 
   $(".gem4").click(addGem4);
@@ -79,7 +76,6 @@ function setup() {
     var x = $(".score");
     score = score + gemValue4;
     x.html("Score :<br />" + score);
-    $(this).off(event);
   }
 
   $(".gem1,.gem2,.gem3,.gem4").click(checkValue);
@@ -91,8 +87,8 @@ function setup() {
       score = 0;
       x.html("Score :<br />" + score);
       console.log("score" + score);
+      $(".gem1,.gem2,.gem3,.gem4").off();
       setup();
-      // $("gem1,.gem2,.gem3,.gem4").off(event);
     }
     if (score === valueGoal) {
       wins++;
@@ -102,8 +98,8 @@ function setup() {
       score = 0;
       x.html("Score :<br />" + score);
       console.log("score" + score);
+      $(".gem1,.gem2,.gem3,.gem4").off();
       setup();
-      // $("gem1,.gem2,.gem3,.gem4").off(event);
     }
   }
   var winsDiv = $(".wins");
