@@ -86,7 +86,6 @@ function setup() {
       var x = $(".score");
       score = 0;
       x.html("Score :<br />" + score);
-      console.log("score" + score);
       $(".gem1,.gem2,.gem3,.gem4").off();
       setup();
     }
@@ -97,7 +96,6 @@ function setup() {
       var x = $(".score");
       score = 0;
       x.html("Score :<br />" + score);
-      console.log("score" + score);
       $(".gem1,.gem2,.gem3,.gem4").off();
       setup();
     }

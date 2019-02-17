@@ -139,3 +139,10 @@ body {
   50% { opacity: 0; }
   100% { opacity: 1; }
 }
+
+@media only screen and (max-width: 640px) {
+  .mainContent {
+    margin: auto;
+    width: 90%;
+  }
+}
