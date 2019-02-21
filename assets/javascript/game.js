@@ -10,7 +10,6 @@ let gemValue4 = 0;
 function mute() {
   document.getElementById('soundtrack').muted=!document.getElementById('soundtrack').muted;
 }
-
 function setup() {
   var x = $(".goal");
   var valueGoal = Math.floor(Math.random() * (120 - 19) + 19);
