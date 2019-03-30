@@ -10,4 +10,6 @@
   
   Good Luck, Traveler...
   
+  Written in HTML, CSS, and JavaScript. A was a study in jQuery and event handlers.
+  
 ![game screenshot](https://randblack.github.io/unit-4-game/assets/images/screenshot.png)
