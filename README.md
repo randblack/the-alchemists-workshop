@@ -12,4 +12,6 @@
   
   Written in HTML, CSS, and JavaScript. A was a study in jQuery and event handlers.
   
-![game screenshot](https://randblack.github.io/unit-4-game/assets/images/screenshot.png)
+  
+  ## Demo
+[View Live Demo](https://randkoch.github.io/the-alchemists-workshop/)
